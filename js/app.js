@@ -3,12 +3,14 @@ $(function() {
         if (window.orientation == 180 || window.orientation == 0) {
             console.log('竖屏');
             $('.box').addClass('shu');
+            setTimeout(function() {
+                $('.content').show();
+                loading();
+            }, 3000);
         }
         if (window.orientation == 90 || window.orientation == -90) {
             console.log('横屏');
             $('.box').removeClass('shu');
-            $('.content').show();
-            loading();
         }
     }
     window.addEventListener('load', rote);
